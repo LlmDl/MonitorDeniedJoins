@@ -1,0 +1,13 @@
+name: MonitorDeniedJoins
+main: com.gmail.llmdlio.MonitorDeniedJoins.MonitorDeniedJoins
+version: ${project.version}
+api-version: ${project.bukkitAPIVersion}
+
+permissions:
+  monitordeniedjoins.*:
+    description: Gives access to all monitordeniedjoins nodes.
+    children:
+      monitordeniedjoins.announce: true
+  monitordeniedjoins.announce:
+    description: Allows players to see announcement ingame.
+    default: false

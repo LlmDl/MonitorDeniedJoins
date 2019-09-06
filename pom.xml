@@ -2,33 +2,43 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.llmdlio.gmail.MonitorDeniedJoins</groupId>
   <artifactId>MonitorDeniedJoins</artifactId>
-  <version>0.0.4</version>
+  <version>0.0.5</version>
   <name>MonitorDeniedJoins</name>
+  <properties>
+    <project.bukkitAPIVersion>1.13</project.bukkitAPIVersion>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
   <build>
-     <plugins>
-         <plugin>
-             <groupId>org.apache.maven.plugins</groupId>
-             <artifactId>maven-compiler-plugin</artifactId>
-             <configuration>
-                 <source>1.7</source>
-                 <target>1.7</target>
-             </configuration>
-         </plugin>
-     </plugins>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <configuration>
+            <source>1.7</source>
+            <target>1.7</target>
+          </configuration>
+        </plugin>
+    </plugins>
+    <sourceDirectory>src</sourceDirectory>
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+        <filtering>true</filtering>
+      </resource>
+    </resources>
   </build>
   <repositories>
-      <repository>
-          <id>bukkit-repo</id>
-          <url>https://hub.spigotmc.org/nexus/content/groups/public/</url>
-      </repository>
+     <repository>
+       <id>bukkit-repo</id>
+       <url>https://hub.spigotmc.org/nexus/content/groups/public/</url>
+     </repository>
   </repositories>   
   <dependencies>
-      <dependency>
-          <groupId>org.bukkit</groupId>
-          <artifactId>bukkit</artifactId>
-          <version>1.8-R0.1-SNAPSHOT</version>
-          <type>jar</type>
-          <scope>provided</scope>
-      </dependency>
+    <dependency>
+      <groupId>org.bukkit</groupId>
+      <artifactId>bukkit</artifactId>
+      <version>1.14.4-R0.1-SNAPSHOT</version>
+      <scope>provided</scope>
+    </dependency>
   </dependencies>
 </project>
